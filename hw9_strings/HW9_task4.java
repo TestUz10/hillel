@@ -1,7 +1,6 @@
-package hanna_aleksieitseva.hw9;
-
+package hanna_aleksieitseva.hw9_strings;
 import java.io.*;
-
+//Ввести 10 строк с консоли. Вывести на консоль те строки, длина которых меньше средней.
 public class HW9_task4 {
     public static void main(String[] args) throws IOException {
         InputStream inputStream = System.in;
@@ -15,7 +14,6 @@ public class HW9_task4 {
         }
         int averageLength = getAverageLength(array);
         printStringsWithAvLengthLessThan(array, averageLength);
-
     }
 
     private static void printStringsWithAvLengthLessThan(String[] array, int averageLength) {
