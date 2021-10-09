@@ -13,6 +13,11 @@ public class Demo {
         SportCar sportCar = new SportCar("Chevy Camaro", "A", 1200, driver, new Engine("Chevrolet", 376), 500);
         System.out.println(lorry);
         System.out.println(sportCar);
+        sportCar.printInfo();
+        sportCar.start();
+        sportCar.turnLeft();
+        sportCar.turnRight();
+        sportCar.stop();
     }
 
 }

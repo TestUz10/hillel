@@ -6,11 +6,11 @@ import hanna_aleksieitseva.hw12_task3.com.company.professions.Driver;
 import java.util.Objects;
 
 public class Car {
-private String carModel;
-private String carClass;
-private int weight;
-private Driver driver;
-private Engine engine;
+    private String carModel;
+    private String carClass;
+    private int weight;
+    private Driver driver;
+    private Engine engine;
 
     public Car(String carModel, String carClass, int weight, Driver driver, Engine engine) {
         this.carModel = carModel;
@@ -22,7 +22,7 @@ private Engine engine;
 
     @Override
     public String toString() {
-        return carModel +   ", carClass: '" + carClass + '\'' +
+        return carModel + ", carClass: '" + carClass + '\'' +
                 ", weight: " + weight +
                 ", driver: " + driver +
                 ", engine is " + engine;
@@ -35,6 +35,32 @@ private Engine engine;
     public void setCarModel(String carModel) {
         this.carModel = carModel;
     }
+
+    public void start() {
+        System.out.println("Поехали");
+    }
+
+    public void stop() {
+        System.out.println("Останавливаемся");
+    }
+
+    public void turnRight() {
+        System.out.println("Поворот направо");
+    }
+
+    public void turnLeft() {
+        System.out.println("Поворот налево");
+    }
+
+    public void printInfo() {
+        System.out.println("Car info:");
+        System.out.println("carModel = " + carModel);
+        System.out.println("carClass = " + carClass);
+        System.out.println("weight = " + weight);
+        System.out.println("engine = " + engine);
+        System.out.println("driver = " + driver);
+    }
+
 
     @Override
     public boolean equals(Object o) {
