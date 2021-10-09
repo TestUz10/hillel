@@ -3,6 +3,8 @@ package hanna_aleksieitseva.hw12_task3.com.company.vehicles;
 import hanna_aleksieitseva.hw12_task3.com.company.details.Engine;
 import hanna_aleksieitseva.hw12_task3.com.company.professions.Driver;
 
+import java.util.Objects;
+
 public class SportCar extends Car {
     private int speed;
 
@@ -29,14 +31,13 @@ public class SportCar extends Car {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
+        if (!super.equals(o)) return false;
         SportCar sportCar = (SportCar) o;
-
         return speed == sportCar.speed;
     }
 
     @Override
     public int hashCode() {
-        return speed;
+        return Objects.hash(super.hashCode(), speed);
     }
 }
